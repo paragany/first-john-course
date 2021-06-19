@@ -1,0 +1,16 @@
+title: first--john
+description: job
+template:
+  repo: first-john-template
+  name: first-john
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
